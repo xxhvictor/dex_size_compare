@@ -16,7 +16,6 @@ csv文件说明:
 第三条记录说明类com.aa.cc是dex1相对于dex2新增的类，且该类的size为2KB
 第四条记录说明类com.aa.dd是dex1相对于dex2移除的类，且该类的siez为3KB
 
-
 参数说明:
 --dex1   设置用于比较的第一个dex文件
 --map1   设置第一个dex文件的mapping文件，如果class文件没有被proguard，可以不设置
@@ -26,5 +25,5 @@ csv文件说明:
 --type   设置文件大小类型：默认是class，即dex解码后的class文件的大小。dex：类在dex里面的
          大小；zip：类转化成dex后再压缩的大小。设置不同type可以从不同维度比较大小
 
-举例比较zip压缩后的大小:
+举例比较zip压缩后的大小:<br/>
 dex_compare.sh --dex1 a.dex --map1 a.maping --dex2 b.dex --map2 b.mapping --type zip --result result.csv
